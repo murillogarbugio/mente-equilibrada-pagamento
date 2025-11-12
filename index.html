@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acessar conteúdo — Mente Equilibrada</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      color: #222;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 500px;
+      margin: 80px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #1e40af;
+    }
+    p {
+      color: #333;
+      margin-bottom: 25px;
+      font-size: 16px;
+    }
+    stripe-buy-button {
+      display: block;
+      margin: 0 auto;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 13px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Assine para acessar</h1>
+    <p>Faça o pagamento para desbloquear todo o conteúdo do <strong>Mente Equilibrada</strong>.</p>
+
+    <!-- Botão do Stripe -->
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+    <stripe-buy-button
+      buy-button-id="prc_assinatura-mensal-h8ad03qi"
+      publishable-key="pk_test_5155Sod0Kkt70wqNaLuEfihDIkpCBW6xiAhrNI5VpKcbNRD1jxZ0580JVnqWmTqKqCtJfR70YyxpWBnQQMPtWahsj00N6MLBlZs">
+    </stripe-buy-button>
+
+    <footer>
+      Após o pagamento, você será redirecionado automaticamente para o site principal.
+    </footer>
+  </div>
+</body>
+</html>
