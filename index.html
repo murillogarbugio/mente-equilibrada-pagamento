@@ -29,9 +29,18 @@
       margin-bottom: 25px;
       font-size: 16px;
     }
-    stripe-buy-button {
-      display: block;
-      margin: 0 auto;
+    .botao {
+      display: inline-block;
+      background-color: #1e40af;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .botao:hover {
+      background-color: #153081;
     }
     footer {
       margin-top: 40px;
@@ -45,15 +54,8 @@
     <h1>Assine para acessar</h1>
     <p>Faça o pagamento para desbloquear todo o conteúdo do <strong>Mente Equilibrada</strong>.</p>
 
-    <!-- Botão do Stripe -->
-<button id="checkout-button">Assinar agora</button>
-
-<script>
-  document.getElementById("checkout-button").addEventListener("click", function () {
-    // Substitua o link abaixo pelo seu link de checkout do Stripe
-    window.location.href = "https://checkout.stripe.com/c/pay/SEU_LINK_AQUI";
-  });
-</script>
+    <!-- Botão de pagamento -->
+    <a href="https://buy.stripe.com/test_cNiaEPcyL0Ht1Yq5T8dQQ00" class="botao">Fazer Assinatura</a>
 
     <footer>
       Após o pagamento, você será redirecionado automaticamente para o site principal.
