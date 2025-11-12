@@ -29,18 +29,25 @@
       margin-bottom: 25px;
       font-size: 16px;
     }
-    .botao {
-      display: inline-block;
-      background-color: #1e40af;
-      color: white;
-      padding: 14px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
+    stripe-buy-button {
+      display: block;
+      margin: 20px auto;
     }
-    .botao:hover {
-      background-color: #153081;
+    .pix-box {
+      background: #f1f5ff;
+      border: 1px solid #d0d7ff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+    .pix-button {
+      background: #1e40af;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
     }
     footer {
       margin-top: 40px;
@@ -52,10 +59,29 @@
 <body>
   <div class="container">
     <h1>Assine para acessar</h1>
-    <p>Faça o pagamento para desbloquear todo o conteúdo do <strong>Mente Equilibrada</strong>.</p>
+    <p>Escolha uma forma de pagamento para desbloquear o conteúdo do <strong>Mente Equilibrada</strong>.</p>
 
-    <!-- Botão de pagamento -->
-    <a href="https://buy.stripe.com/test_cNiaEPcyL0Ht1Yq5T8dQQ00" class="botao">Fazer Assinatura</a>
+    <!-- BOTÃO DO STRIPE -->
+    <h2>💳 Pagar com Cartão (Stripe)</h2>
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+    <stripe-buy-button
+      buy-button-id="prc_assinatura-mensal-h8ad03qi"
+      publishable-key="pk_test_5155Sod0Kkt70wqNaLuEfihDIkpCBW6xiAhrNI5VpKcbNRD1jxZ0580JVnqWmTqKqCtJfR70YyxpWBnQQMPtWahsj00N6MLBlZs">
+    </stripe-buy-button>
+
+    <!-- PAGAMENTO COM PIX -->
+    <div class="pix-box">
+      <h2>⚡ Pagar com Pix</h2>
+      <p>Valor: <strong>R$ 14,90</strong></p>
+      <p>Chave Pix (telefone): <strong>+55 44 99980-8805</strong></p>
+      <p>Banco: <strong>Sicredi</strong></p>
+      <p>Nome do recebedor: <strong>Mente Equilibrada</strong></p>
+      <p>Após realizar o pagamento, clique abaixo para acessar o conteúdo:</p>
+
+      <a href="https://murillogarbugio.github.io/mente-equilibrada-online/" target="_blank">
+        <button class="pix-button">✅ Já paguei, quero acessar</button>
+      </a>
+    </div>
 
     <footer>
       Após o pagamento, você será redirecionado automaticamente para o site principal.
