@@ -46,11 +46,14 @@
     <p>Faça o pagamento para desbloquear todo o conteúdo do <strong>Mente Equilibrada</strong>.</p>
 
     <!-- Botão do Stripe -->
-    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-    <stripe-buy-button
-      buy-button-id="prc_assinatura-mensal-h8ad03qi"
-      publishable-key="pk_test_5155Sod0Kkt70wqNaLuEfihDIkpCBW6xiAhrNI5VpKcbNRD1jxZ0580JVnqWmTqKqCtJfR70YyxpWBnQQMPtWahsj00N6MLBlZs">
-    </stripe-buy-button>
+<button id="checkout-button">Assinar agora</button>
+
+<script>
+  document.getElementById("checkout-button").addEventListener("click", function () {
+    // Substitua o link abaixo pelo seu link de checkout do Stripe
+    window.location.href = "https://checkout.stripe.com/c/pay/SEU_LINK_AQUI";
+  });
+</script>
 
     <footer>
       Após o pagamento, você será redirecionado automaticamente para o site principal.
